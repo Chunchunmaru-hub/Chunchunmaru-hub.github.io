@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chunchunmaru | Home</title>
+  <link rel="icon" href="/assets/resources/images/main-logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+      <link rel="stylesheet" href="/assets/css/themes.css">
+  <link rel="stylesheet" href="/assets/css/preloader.css" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = savedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+      window.addEventListener("load", () => {
+        document.body.style.visibility = "visible";
+      });
+    })();
+  </script>
+  <style>
+.content-container {
+  padding-bottom: 5rem;
+  max-width: 1200px; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+    .section-emulator {
+      margin: 2rem 1rem;
+    }
+
+
+    .emu-section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #444;
+      width: fit-content;
+      padding-bottom: 0.25rem;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .emu-card {
+      border-radius: 1rem;
+      padding: 1.25rem;
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .emu-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 20%;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-subtitle {
+      font-size: 0.85rem;
+      color: #aaa;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .download-icon {
+      padding: 6px;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      text-decoration: none;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .download-icon:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+    }
+
+.section-emulator:last-of-type {
+  margin-bottom: 5rem !important;
+}
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-left">
+         <img src="/assets/resources/images/main-logo.png" class="main-icon"></a>   
+      <a href="" class="icon-container"><i class="fas fa-rss nav-icon"></i></a>
+      <a href="/tracker.html" class="icon-container"><i class="fas fa-cloud-download-alt nav-icon"></i></a>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="icon-container">
+        <i id="theme-icon" class="fas fa-sun nav-icon"></i>
+      </button>
+    </div>
+  </nav>
+ <main class="content-container">
+  <div class="section-emulator">
+    <div class="emu-section-title">Nintendo</div>
+    <div class="cards-container">
+        <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/9c156653d889d37811915236feed8660/32/256x256.png" alt="MelonDS">
+        <div class="card-title">Melon DS</div>
+        <div class="card-subtitle">DS Emulator</div>
+            <a href="https://melonds.kuribo64.net/downloads.php" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/6c7cd904122e623ce625613d6af337c4/32/256x256.png" alt="Ryujinx">
+        <div class="card-title">Ryujinx</div>
+        <div class="card-subtitle">Switch Emulator</div>
+            <a href="https://drive.google.com/file/d/1Z9Vwu5XCC2tDTJZ1IHybyHXpDbmx0js7/view?usp=sharing" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/9308b0d6e5898366a4a986bc33f3d3e7/32/256x256.png" alt="Cemu">
+        <div class="card-title">Cemu</div>
+        <div class="card-subtitle">Wii U Emulator</div>
+            <a href="https://cemu.info/#download" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/7d2a383e54274888b4b73b97e1aaa491/32/256x256.png" alt="Dolphin">
+        <div class="card-title">Dolphin</div>
+        <div class="card-subtitle">GameCube / Wii</div>
+            <a href="https://dolphin-emu.org/" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon_thumb/62834c05f0f49e63a12115db688560ee.png" alt="Azahar">
+        <div class="card-title">AzaharPlus</div>
+        <div class="card-subtitle">3DS Emulator</div>
+            <a href="https://github.com/AzaharPlus/AzaharPlus/releases" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-emulator">
+    <div class="emu-section-title">PlayStation</div>
+    <div class="cards-container">
+         <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/9a32ff36c65e8ba30915a21b7bd76506/32/256x256.png" alt="PCSX2">
+        <div class="card-title">PCSX2</div>
+        <div class="card-subtitle">PS2 Emulator</div>
+            <a href="https://pcsx2.net/downloads" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://rpcs3.net/cdn/branding/minimal-white-png.png" alt="RPCS3">
+        <div class="card-title">RPCS3</div>
+        <div class="card-subtitle">PS3 Emulator</div>
+            <a href="https://rpcs3.net/download" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://www.logic-sunrise.com/images/news/1195874/ps4-shadps4-030-disponible.png" alt="ShadPS4">
+        <div class="card-title">ShadPS4</div>
+        <div class="card-subtitle">PS4 Emulator</div>
+            <a href="https://shadps4.net/downloads/" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/1a4a5f89e71e4bb9973355c964a950b4/32/256x256.png" alt="Vita3k">
+        <div class="card-title">Vita3k</div>
+        <div class="card-subtitle">Vita Emulator</div>
+            <a href="https://vita3k.org/index.html#download" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/2ba3c4b9390cc43edb94e42144729d33/32/256x256.png" alt="PPSSPP">
+        <div class="card-title">PPSSPP</div>
+        <div class="card-subtitle">PSP Emulator</div>
+            <a href="https://www.ppsspp.org/download/" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-emulator">
+    <div class="emu-section-title">Xbox</div>
+    <div class="cards-container">
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/420c841038c492fed4d19999a813009d/32/1024x1024.png" alt="Xenia">
+        <div class="card-title">Xenia</div>
+        <div class="card-subtitle">Xbox 360 Emulator</div>
+            <a href="https://xenia.jp/download/" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+        <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon_thumb/67b96f26f5e00c2212e6711dd5aef7b1.png" alt="XQEMU">
+        <div class="card-title">XQEMU</div>
+        <div class="card-subtitle">Original Xbox Emulator</div>
+        <a href="https://xqemu.com/getting-started/" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+    </div>
+  </div>
+
+    <div class="section-emulator">
+    <div class="emu-section-title">Multi-Emulator</div>
+    <div class="cards-container">
+      <div class="emu-card">
+        <img src="https://cdn2.steamgriddb.com/icon/ea1818cbe59c23b20f1a10a8aa083a82/32/256x256.png" alt="RetroArch">
+        <div class="card-title">RetroArch</div>
+        <div class="card-subtitle">Multi Console Emulator</div>
+        <a href="https://www.retroarch.com/?page=platforms" class="download-icon" target="_blank"><i class="fa fa-download"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 2rem;"></div>
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/preloader.js"></script>
+  <script src="/assets/js/waves.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+  /* Table styles */
+.torrent-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #333;
+    padding: 15px;
+    font: 12px;
+    border-bottom: 2px solid #555;
+}
+
+/* Align first <th> (Category) to the left */
+thead th:first-child {
+    text-align: left;
+}
+
+/* Center other <th> (Name, Link, ) */
+thead th:nth-child(2),
+thead th:nth-child(3),
+thead th:nth-child(4) {
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child {
+    border-bottom: none; /* Remove border from the last row */
+}
+
+tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* General styles for the table cells */
+td {
+    padding: 10px;
+    font: 12px;
+    vertical-align: middle; /* Center content vertically */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center; /* Center the content horizontally by default */
+}
+
+/* Left-align the Category column */
+td:first-child {
+    text-align: left; /* Align text in the first column (Category) to the left */
+}
+
+/* Center the content of the other columns (Name, Link, ) */
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+    text-align: center; /* Center text in these columns */
+}
+
+/* Styling for all <a> elements in the table */
+a {
+    color: #66ccff; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font: 18px; /* Set font  */
+    display: inline-flex; /* Flex container for <a> */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    width: auto; /* Auto width for the link */
+    height: 100%; /* Make the <a> take up full height of the <td> */
+    padding: 0; /* Remove padding from the <a> element */
+}
+
+/* Ensure there is a minimum width for the '' column */
+td:last-child {
+    width: 120px; /* Set a minimum width to avoid squishing text */
+}
+
+/* Styling for tags */
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font: 12px;
+    font-weight: bold;
+    text-align: center;
+}

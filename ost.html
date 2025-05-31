@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunchunmaru | Home</title>
+    <link rel="icon" href="/assets/resources/images/main-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/preloader.css">
+    <script>
+        // Set theme immediately on page load
+        (function() {
+            const savedTheme = localStorage.getItem("theme");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Default to dark or light theme
+            const theme = savedTheme || (prefersDark ? "dark" : "light");
+
+            // Apply theme to root element immediately
+            document.documentElement.setAttribute("data-theme", theme);
+            
+            // Wait for the body to load and then make content visible
+            window.addEventListener('load', () => {
+                document.body.style.visibility = 'visible';
+            });
+        })();
+    </script>
+</head>
+<style>
+.torrent-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #333;
+    padding: 15px;
+    font-size: 12px;
+    border-bottom: 2px solid #555;
+}
+
+thead th:first-child {
+    text-align: left;
+}
+
+thead th:nth-child(2),
+thead th:nth-child(3),
+thead th:nth-child(4) {
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+td {
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+    text-align: center; 
+}
+
+a {
+    color: #66ccff;
+    text-decoration: none; 
+    font-size: 18px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    width: auto;
+    height: 100%;
+    padding: 0;
+}
+
+td:last-child {
+    width: 120px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lossless-audio {
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    color: white;
+}
+
+.manga {
+    background: linear-gradient(to right, #c31432, #240b36);
+    color: white;
+}
+
+.light-novel {
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+    color: white;
+}
+
+</style>
+<body>
+     <div class="preloader" id="preloader">
+        <div class="preloader-content">
+           <img src="/assets/resources/images/main-logo.png" alt="Logo" class="preloader-logo">
+            </div>
+        </div>
+    <nav>
+        <div class="nav-left">
+            <a href=""><img src="/assets/resources/images/main-logo.png" class="main-icon"></a>   
+            <a href="/index.html" class="icon-container"><i class="nav-icon fas fa-home"></i></a>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="icon-container">
+                <i id="theme-icon" class="nav-icon fas fa-sun"></i>
+            </button>     
+        </div>
+    </nav>
+    <canvas id="topoCanvas"></canvas>
+    <div class="torrent-table" style="position: relative; z-index: 1; padding: 20px;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Anime</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto</td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1BQrq4g9nDNOD_5vSrCSDiRSFM3b-YpQE?usp=sharing"><i class="fas fa-download"></i></a></td>
+
+                    <td>257 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto</td>
+                    <td>Original Soundtrack 2</td>
+                    <td><a href="https://drive.google.com/drive/folders/1bNLT3gIlNdxDt15Sn1hqct6i_1I_mloq?usp=sharing"><i class="fas fa-download"></i></a></td>
+
+                    <td>222 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto</td>
+                    <td>Original Soundtrack 3</td>
+                    <td><a href="https://drive.google.com/drive/folders/12Pm8LXfj9db_A6gOk-x7ERy06vYfYbJ8?usp=sharing"><i class="fas fa-download"></i></a></td>
+
+                    <td>365 MB</td>
+                </tr>
+
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto The Movie: Ninja Clash In the Land of Snow</td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1onzmevccgPZZMlBOWxQRCOxZlXJhVUmr?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>189 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto The Movie: Legend of The Stone of Gelel</td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1apB2_U_mieif44LbBPHNqH_1NZVlzbwx?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>372 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto The Movie: Guardians of The Crescent Moon Kingdom </td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/19EljRdMjtEN8dzC08tgXnNLWYmM65ARc?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>277 MB</td>
+                </tr>
+
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>The Last Naruto The Movie</td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1T7qxngPmKTsALFB00VUF34uYLqLQr_Yh?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>384 MB</td>
+                </tr>
+
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden</td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1Qp4Y3h39DItgGFQPHhCbdPoaI5u4e2Ou?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>409 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden</td>
+                    <td>Original Soundtrack 2</td>
+                    <td><a href="https://drive.google.com/drive/folders/1UYz_zzD-s_icqyJHU_X5z6W88zPnLmHR?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>393 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden</td>
+                    <td>Original Soundtrack 3</td>
+                    <td><a href="https://drive.google.com/drive/folders/1Wz4-bXpjXZdNsUxIl3Lxtjh25MpP6HfX?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>398 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden The Movie</td>
+                    <td>Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1nN8Tupk6p0S63SqmLYSqUyQ8n3ApbxI7?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>430 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden The Movie</td>
+                    <td>Bonds Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/137-7NzdBRtjOe6cJMoatgVdFXuSl2qI6?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>289 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden The Movie</td>
+                    <td>The Will Of Fire Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1PxDhNuq8fs5YZE5FHsFkRpJBXr1XeAPg?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>314 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden The Movie</td>
+                    <td>The Lost Tower Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1uAH5k7ldoYcwz98lcSizbbDJcmiOvRSW?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>269 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden The Movie</td>
+                    <td>Blood Prison Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1CmQVvyZfbqpDPD4-ekYI9EQZM00gZm0_?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>300 MB</td>
+                </tr>
+                <tr>
+                    <td><span class="tag lossless-audio">Lossless Audio</span></td>
+                    <td>Naruto Shippuden The Movie</td>
+                    <td>Road To Ninja Original Soundtrack</td>
+                    <td><a href="https://drive.google.com/drive/folders/1eCgDoIapxRRhnj8qEl_v_xjt-ikXRrz0?usp=sharing"><i class="fas fa-download"></i></a></td>
+                    <td>358 MB</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/waves.js"></script>
+</body>
+</html>

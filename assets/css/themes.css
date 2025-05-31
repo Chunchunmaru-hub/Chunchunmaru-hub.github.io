@@ -1,0 +1,131 @@
+/* Light Theme Styles */
+
+body[data-theme="light"] .tutorials-section {
+    background-color: #f9f9f9;
+    color: #212121;
+}
+
+body[data-theme="light"] .tutorial-card {
+    background-color: #dfdddd;
+    box-shadow: 0 4px 10px rgba(200, 200, 200, 0.5);
+}
+
+body[data-theme="light"] .tutorial-info h2 {
+    color: #212121;
+}
+
+body[data-theme="light"] .tutorial-info p {
+    color: #555;
+}
+
+body[data-theme="light"] .main-text {
+    color: #212121;
+}
+
+body[data-theme="light"] .section {
+    background-color: #dfdddd;
+    box-shadow: 0 4px 10px rgba(200, 200, 200, 0.5);
+}
+
+body[data-theme="light"] .section-title {
+    color: #212121;
+}
+
+body[data-theme="light"] .emu-section-title {
+    color: #212121;
+}
+
+body[data-theme="light"] .nav-icon, 
+body[data-theme="light"] .icon-container i {
+    color: #000;
+}
+
+body[data-theme="light"] .nav-icon:hover, 
+body[data-theme="light"] .icon-container i:hover {
+    color: #000;
+}
+
+body[data-theme="light"] .nav-icon:active, 
+body[data-theme="light"] .icon-container i:active {
+    color: #000;
+}
+
+body[data-theme="light"] .emu-card {
+     background-color: #dfdddd;
+     box-shadow: 0 4px 10px rgba(173, 173, 173, 0.5);
+}
+
+body[data-theme="light"] .download-icon {
+  background-color: rgba(102, 101, 101, 0.08);
+    color: black;
+}
+
+
+/* Dark Theme Styles */
+body[data-theme="dark"] .tutorials-section {
+    background-color: #161616;
+    color: #B3B4B1
+;
+}
+
+body[data-theme="dark"] .tutorial-card {
+    background-color: #212121;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme="dark"] .tutorial-info h2 {
+    color: #B3B4B1
+;
+}
+
+body[data-theme="dark"] .tutorial-info p {
+    color: rgb(133, 123, 123);
+}
+
+body[data-theme="dark"] .main-text {
+    color: #B3B4B1
+;
+}
+
+body[data-theme="dark"] .section {
+    background-color: #212121;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme="dark"] .section-title {
+    color: #B3B4B1
+;
+}
+
+body[data-theme="dark"] .emu-section-title {
+    color: #B3B4B1
+;
+}
+
+body[data-theme="dark"] .nav-icon, 
+body[data-theme="dark"] .icon-container i {
+    color: #B3B4B1
+; /* Default color for dark theme icons */
+}
+
+body[data-theme="dark"] .nav-icon:hover, 
+body[data-theme="dark"] .icon-container i:hover {
+    color: #B3B4B1
+; /* Color on hover (you can adjust this as needed) */
+}
+
+body[data-theme="dark"] .nav-icon:active, 
+body[data-theme="dark"] .icon-container i:active {
+    color: #B3B4B1
+; /* Color when clicked (active state) */
+}
+
+body[data-theme="dark"] .emu-card {
+      background-color: #1a1a1a;
+}
+
+body[data-theme="dark"] .download-icon {
+ background-color: rgba(116, 113, 113, 0.25);
+       color: white;
+}
+
