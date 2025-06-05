@@ -9,17 +9,6 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
       <link rel="stylesheet" href="/assets/css/themes.css">
   <link rel="stylesheet" href="/assets/css/preloader.css" />
-  <script>
-    (function () {
-      const savedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const theme = savedTheme || (prefersDark ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-      window.addEventListener("load", () => {
-        document.body.style.visibility = "visible";
-      });
-    })();
-  </script>
   <style>
 .content-container {
   padding-bottom: 5rem;
@@ -109,18 +98,20 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-left">
-         <img src="/assets/resources/images/main-logo.png" class="main-icon"></a>   
-      <a href="" class="icon-container"><i class="fas fa-rss nav-icon"></i></a>
-      <a href="/tracker.html" class="icon-container"><i class="fas fa-cloud-download-alt nav-icon"></i></a>
-    </div>
-    <div class="nav-right">
-      <button id="theme-toggle" class="icon-container">
-        <i id="theme-icon" class="fas fa-sun nav-icon"></i>
-      </button>
-    </div>
-  </nav>
+ <nav>
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="/assets/resources/images/main-logo.png" class="main-icon" alt="Main Logo">
+            </a>
+            <a href="/tutorial.html" class="icon-container"><i class="fa fa-rss nav-icon"></i></a>
+            <a href="/tracker.html" class="icon-container"><i class="fas fa-cloud-arrow-down nav-icon"></i></a>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="icon-container">
+                <i id="theme-icon" class="nav-icon fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
  <main class="content-container">
   <div class="section-emulator">
     <div class="emu-section-title">Nintendo</div>

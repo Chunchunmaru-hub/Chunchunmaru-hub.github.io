@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunchunmaru | Home</title>
+    <link rel="icon" href="/assets/resources/images/main-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/preloader.css">
+</head>
+<style>
+.torrent-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #333;
+    padding: 15px;
+    font-size: 12px;
+    border-bottom: 2px solid #555;
+}
+
+thead th:first-child {
+    text-align: left;
+}
+
+thead th:nth-child(2),
+thead th:nth-child(3),
+thead th:nth-child(4) {
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+td {
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+    text-align: center; 
+}
+
+a {
+    color: #66ccff;
+    text-decoration: none; 
+    font-size: 18px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    width: auto;
+    height: 100%;
+    padding: 0;
+}
+
+td:last-child {
+    width: 120px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pc {
+  background: linear-gradient(135deg, #003791, #00A0FF); 
+  color: white;
+}
+
+.ps {
+  background: linear-gradient(135deg, #0078D7, #00BFFF);
+  color: white;
+}
+
+.ntnd {
+  background: linear-gradient(135deg, #B22222, #FF6347);
+  color: white;
+}
+
+.xbx {
+  background: linear-gradient(135deg, #107C10, #6CC24A); 
+  color: white;
+}
+
+.rtro {
+  background: linear-gradient(135deg, #663399, #9B59B6); 
+  color: white;
+}
+
+
+</style>
+<body>
+     <div class="preloader" id="preloader">
+        <div class="preloader-content">
+           <img src="/assets/resources/images/main-logo.png" alt="Logo" class="preloader-logo">
+            </div>
+        </div>
+    <nav>
+        <div class="nav-left">
+            <a href="/index.html"><img src="/assets/resources/images/main-logo.png" class="main-icon"></a>   
+            <a href="/index.html" class="icon-container"><i class="nav-icon fas fa-home"></i></a>
+            <a href="/seven_seas_apps.html" class="icon-container"><i class="nav-icon fas fa-cubes"></i></a>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="icon-container">
+                <i id="theme-icon" class="nav-icon fas fa-sun"></i>
+            </button>     
+        </div>
+    </nav>
+    <canvas id="topoCanvas"></canvas>
+    <div class="torrent-table" style="position: relative; z-index: 1; padding: 20px;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Site</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tag pc">PC</span></td>
+                    <td>Fitgirl-repacks</td>
+                     <td><a href="https://fitgirl-repacks.site/"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+                    <tr>
+                    <td><span class="tag pc">PC</span></td>
+                    <td>Dodi-repacks</td>
+                    <td><a href="https://dodi-repacks.site"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+                <tr>
+                    <td><span class="tag pc">PC</span></td>
+                    <td>SteamRIP</td>
+                    <td><a href="https://steamrip.com/"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+                <tr>
+                    <td><span class="tag ntnd">NINTENDO</span></td>
+                    <td>Nswgame</td>
+                    <td><a href="https://nswgame.com/"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+                <tr>
+                    <td><span class="tag ps">PLAYSTATION</span></td>
+                    <td>Dlpsgame</td>
+                    <td><a href="https://dlpsgame.com/"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+                <tr>
+                    <td><span class="tag xbx">XBOX</span></td>
+                    <td>Dlxbgame</td>
+                    <td><a href="https://dlxbgame.com/"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+                <tr>
+                    <td><span class="tag rtro">RETRO</span></td>
+                    <td>Vimmslair</td>
+                    <td><a href="https://vimm.net/"><i class="fas fa-paperclip"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/waves.js"></script>
+</body>
+</html>

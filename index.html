@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,55 +9,53 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/preloader.css">
-    <script>
-        // Set theme immediately on page load
-        (function() {
-            const savedTheme = localStorage.getItem("theme");
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-            // Default to dark or light theme
-            const theme = savedTheme || (prefersDark ? "dark" : "light");
-
-            // Apply theme to root element immediately
-            document.documentElement.setAttribute("data-theme", theme);
-            
-            // Wait for the body to load and then make content visible
-            window.addEventListener('load', () => {
-                document.body.style.visibility = 'visible';
-            });
-        })();
-    </script>
 </head>
+
 <body>
     <div class="preloader" id="preloader">
         <div class="preloader-content">
-           <img src="/assets/resources/images/main-logo.png" alt="Logo" class="preloader-logo">
-            </div>
+            <img src="/assets/resources/images/main-logo.png" alt="Logo" class="preloader-logo">
         </div>
+    </div>
+
     <nav>
         <div class="nav-left">
-           <img src="/assets/resources/images/main-logo.png" class="main-icon"></a>   
+            <a href="index.html">
+                <img src="/assets/resources/images/main-logo.png" class="main-icon" alt="Main Logo">
+            </a>
             <a href="/tutorial.html" class="icon-container"><i class="fa fa-rss nav-icon"></i></a>
-            <a href="/tracker.html" class="icon-container"><i class="fas fa-cloud-arrow-down nav-icon"></i></a>
+            <a href="/ost.html" class="icon-container"><i class="fas fa-compact-disc nav-icon"></i></a>
+             <a href="/emulation.html" class="icon-container"><i class="fas fa-solid fa-gamepad nav-icon"></i></a>
+            <a href="/tutorial.html" class="icon-container"><i class="fas fa-solid fa-brain nav-icon"></i></a>
+            <a href="/seven_seas_apps.html" class="icon-container"><i class="fas fa-solid fa-skull-crossbones nav-icon"></i></a>
         </div>
         <div class="nav-right">
             <button id="theme-toggle" class="icon-container">
                 <i id="theme-icon" class="nav-icon fas fa-sun"></i>
-            </button>     
+            </button>
         </div>
     </nav>
+
 <section class="video-section">
-    <video disablepictureinpicture autoplay loop class="video-bg">
-      <source src="/assets/resources/video/bad_apple.mp4" type="video/mp4" />
+    <video disablepictureinpicture autoplay loop muted class="video-bg">
+        <source src="/assets/resources/video/bad_apple.mp4" type="video/mp4" />
     </video>
-      <div class="video-overlay"></div>
+
+    <audio autoplay loop>
+        <source src="/assets/resources/audio/bad_apple.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="video-overlay"></div>
     <div class="video-overlay-content">
-    <div class="main-text">
-        <h2>Welcome</h2>
-        <h2>Welcome</h2>
-    </div>    
+        <div class="main-text">
+            <h2>Welcome</h2>
+            <h2>Welcome</h2>
+        </div>
+    </div>
+</section>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/preloader.js"></script>
     <script src="assets/js/waves.js"></script>
 </body>
+
 </html>

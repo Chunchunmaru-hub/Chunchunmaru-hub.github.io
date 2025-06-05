@@ -365,17 +365,17 @@ body[data-theme="light"] .emu-section-title {
 
 body[data-theme="light"] .nav-icon, 
 body[data-theme="light"] .icon-container i {
-    color: #000; /* Default color for light theme icons */
+    color: #000;
 }
 
 body[data-theme="light"] .nav-icon:hover, 
 body[data-theme="light"] .icon-container i:hover {
-    color: #000; /* Color on hover (you can adjust this as needed) */
+    color: #000;
 }
 
 body[data-theme="light"] .nav-icon:active, 
 body[data-theme="light"] .icon-container i:active {
-    color: #000; /* Color when clicked (active state) */
+    color: #000;
 }
 
 body[data-theme="light"] .emu-card {
