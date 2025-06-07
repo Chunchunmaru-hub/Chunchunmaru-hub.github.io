@@ -9,9 +9,26 @@
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/preloader.css">
     <style>
-  .background-section { height: 100vh; background-image: url('/assets/resources/images/shooo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center top;}
-</style>
-
+        .background-section { 
+            height: 100vh; 
+            background-image: url('/assets/resources/images/shooo.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center top;
+            position: relative;
+        }
+        .error-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgb(62, 63, 63);
+            border: 2px
+        }
+    </style>
 </head>
 <body>
     <div class="preloader" id="preloader">
@@ -22,7 +39,7 @@
     <nav>
         <div class="nav-left">
             <a href=""><img src="/assets/resources/images/main-logo.png" class="main-icon"></a>   
-            <a href="/index.html" class="icon-container"><i class="nav-icon fas fa-home"></i></a>
+            <a href="/index" class="icon-container"><i class="nav-icon fas fa-home"></i></a>
         </div>
         <div class="nav-right">
             <button id="theme-toggle" class="icon-container">
@@ -30,7 +47,9 @@
             </button>     
         </div>
     </nav>
-    <div class="background-section"></div>
+    <div class="background-section">
+        <div class="error-text">404</div>
+    </div>
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/preloader.js"></script>

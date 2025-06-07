@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/preloader.css">
-    <script>
-        // Set theme immediately on page load
-        (function() {
-            const savedTheme = localStorage.getItem("theme");
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-            // Default to dark or light theme
-            const theme = savedTheme || (prefersDark ? "dark" : "light");
-
-            // Apply theme to root element immediately
-            document.documentElement.setAttribute("data-theme", theme);
-            
-            // Wait for the body to load and then make content visible
-            window.addEventListener('load', () => {
-                document.body.style.visibility = 'visible';
-            });
-        })();
-    </script>
 </head>
 <style>
 .torrent-table {
