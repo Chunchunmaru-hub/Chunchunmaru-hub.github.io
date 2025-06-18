@@ -1,9 +1,0 @@
-nav {
-    background: rgba(40, 37, 37, 0.8); 
-    backdrop-filter: blur(10px); 
-}
-
-
-nav a:hover, nav a.active {
-    background: rgba(230, 191, 179, 0.2); 
-}
