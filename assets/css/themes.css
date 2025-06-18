@@ -10,8 +10,9 @@ body[data-theme="light"] .nav-right img:not(.main-icon) {
 }
 
 body[data-theme="light"] nav {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.5);
     border-color: #ccc;
+    backdrop-filter: blur(10px); 
 }
 
 body[data-theme="light"] .main-text {
@@ -148,8 +149,9 @@ body[data-theme="dark"] {
 }
 
 body[data-theme="dark"] nav {
-    background-color: #212121;
+    background-color: rgb(33, 33, 33, 0.5);
     border-color: #232323;
+    backdrop-filter: blur(10px); 
 }
 
 body[data-theme="dark"] .nav-left img:not(.main-icon),
