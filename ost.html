@@ -6,102 +6,11 @@
     <title>Chunchunmaru | Home</title>
     <link rel="icon" href="/assets/resources/images/main-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
+     <link rel="stylesheet" href="/assets/css/torrent_table.css">
     <link rel="stylesheet" href="/assets/css/themes.css">
     <link rel="stylesheet" href="/assets/css/preloader.css">
 </head>
 <style>
-.torrent-table {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow-x: auto;
-    position: relative;
-    z-index: 1;
-}
-
-table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    background-color: #222;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-thead th {
-    background-color: #333;
-    padding: 15px;
-    font-size: 12px;
-    border-bottom: 2px solid #555;
-}
-
-thead th:first-child {
-    text-align: left;
-}
-
-thead th:nth-child(2),
-thead th:nth-child(3),
-thead th:nth-child(4) {
-    text-align: center;
-}
-
-tbody tr {
-    border-bottom: 1px solid #333;
-    transition: background-color 0.2s ease;
-}
-
-tbody tr:last-child {
-    border-bottom: none;
-}
-
-tbody tr:hover {
-    background-color: #2a2a2a;
-}
-
-td {
-    padding: 10px;
-    font-size: 12px;
-    vertical-align: middle;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: center;
-}
-
-td:first-child {
-    text-align: left;
-}
-
-td:nth-child(2),
-td:nth-child(3),
-td:nth-child(4) {
-    text-align: center; 
-}
-
-a {
-    color: #66ccff;
-    text-decoration: none; 
-    font-size: 18px; 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center; 
-    width: auto;
-    height: 100%;
-    padding: 0;
-}
-
-td:last-child {
-    width: 120px;
-}
-
-.tag {
-    display: inline-block;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-}
 
 .lossless-audio {
     background: linear-gradient(to right, #ff00cc, #3333ff);
@@ -137,7 +46,7 @@ td:last-child {
         </div>
     </nav>
     <canvas id="topoCanvas"></canvas>
-    <div class="torrent-table" style="position: relative; z-index: 1; padding: 20px;">
+    <div class="torrent-table">
         <table>
             <thead>
                 <tr>

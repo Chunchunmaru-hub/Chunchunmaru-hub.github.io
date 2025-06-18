@@ -24,21 +24,11 @@ body::before {
     z-index: -1;
 }
 
-body[data-theme="light"] {
-    background-color: #dfdddd;
-    color: #000;
-}
-
-body[data-theme="dark"] {
-    background-color: #161616;
-    color: #cbccc9;
-}
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #B3B4B1;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s;
@@ -47,10 +37,6 @@ nav {
     z-index: 1000;
 }
 
-body[data-theme="dark"] nav {
-    background-color: #212121;
-    border-color: #232323;
-}
 
 .nav-left, .nav-right {
     display: flex;
@@ -91,15 +77,6 @@ body[data-theme="dark"] nav {
     cursor: pointer;
 }
 
-body[data-theme="light"] .nav-left img:not(.main-icon),
-body[data-theme="light"] .nav-right img:not(.main-icon) {
-    filter: brightness(0);
-}
-
-body[data-theme="dark"] .nav-left img:not(.main-icon),
-body[data-theme="dark"] .nav-right img:not(.main-icon) {
-    filter: brightness(1);
-}
 
 .container {
     display: flex;
@@ -145,10 +122,14 @@ body[data-theme="dark"] .nav-right img:not(.main-icon) {
 .video-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* full page height */
+    min-height: 100vh; /* allow content to grow */
     overflow: hidden;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .video-bg {
     position: absolute;
@@ -327,137 +308,6 @@ body[data-theme="dark"] .nav-right img:not(.main-icon) {
     text-align: center;
 }
 
-/* Light Theme Styles */
-body[data-theme="light"] .tutorials-section {
-    background-color: #f9f9f9;
-    color: #212121;
-}
-
-body[data-theme="light"] .tutorial-card {
-    background-color: #dfdddd;
-    box-shadow: 0 4px 10px rgba(200, 200, 200, 0.5);
-}
-
-body[data-theme="light"] .tutorial-info h2 {
-    color: #212121;
-}
-
-body[data-theme="light"] .tutorial-info p {
-    color: #555;
-}
-
-body[data-theme="light"] .main-text {
-    color: #212121;
-}
-
-body[data-theme="light"] .section {
-    background-color: #dfdddd;
-    box-shadow: 0 4px 10px rgba(200, 200, 200, 0.5);
-}
-
-body[data-theme="light"] .section-title {
-    color: #212121;
-}
-
-body[data-theme="light"] .emu-section-title {
-    color: #212121;
-}
-
-body[data-theme="light"] .nav-icon, 
-body[data-theme="light"] .icon-container i {
-    color: #000;
-}
-
-body[data-theme="light"] .nav-icon:hover, 
-body[data-theme="light"] .icon-container i:hover {
-    color: #000;
-}
-
-body[data-theme="light"] .nav-icon:active, 
-body[data-theme="light"] .icon-container i:active {
-    color: #000;
-}
-
-body[data-theme="light"] .emu-card {
-     background-color: #dfdddd;
-     box-shadow: 0 4px 10px rgba(173, 173, 173, 0.5);
-}
-
-body[data-theme="light"] .download-icon {
-  background-color: rgba(102, 101, 101, 0.08);
-    color: black;
-}
-
-
-/* Dark Theme Styles */
-body[data-theme="dark"] .tutorials-section {
-    background-color: #161616;
-    color: #B3B4B1
-;
-}
-
-body[data-theme="dark"] .tutorial-card {
-    background-color: #212121;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-body[data-theme="dark"] .tutorial-info h2 {
-    color: #B3B4B1
-;
-}
-
-body[data-theme="dark"] .tutorial-info p {
-    color: rgb(133, 123, 123);
-}
-
-body[data-theme="dark"] .main-text {
-    color: #B3B4B1
-;
-}
-
-body[data-theme="dark"] .section {
-    background-color: #212121;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-body[data-theme="dark"] .section-title {
-    color: #B3B4B1
-;
-}
-
-body[data-theme="dark"] .emu-section-title {
-    color: #B3B4B1
-;
-}
-
-body[data-theme="dark"] .nav-icon, 
-body[data-theme="dark"] .icon-container i {
-    color: #B3B4B1
-; /* Default color for dark theme icons */
-}
-
-body[data-theme="dark"] .nav-icon:hover, 
-body[data-theme="dark"] .icon-container i:hover {
-    color: #B3B4B1
-; /* Color on hover (you can adjust this as needed) */
-}
-
-body[data-theme="dark"] .nav-icon:active, 
-body[data-theme="dark"] .icon-container i:active {
-    color: #B3B4B1
-; /* Color when clicked (active state) */
-}
-
-body[data-theme="dark"] .emu-card {
-      background-color: #1a1a1a;
-}
-
-body[data-theme="dark"] .download-icon {
- background-color: rgba(116, 113, 113, 0.25);
-       color: white;
-}
-
-
 #topoCanvas {
     position: fixed;
     top: 0;
@@ -466,6 +316,5 @@ body[data-theme="dark"] .download-icon {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    background: #111;
 }
 
